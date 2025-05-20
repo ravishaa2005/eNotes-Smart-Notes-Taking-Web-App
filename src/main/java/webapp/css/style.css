@@ -1,0 +1,39 @@
+.bg-custom{
+	background:#455a64
+}
+.navbar .nav-item .nav-link {
+    font-size: 15px;
+    color: white;
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.btn-custom-nav {
+    background-color: #455a64;
+    border: 1px solid #b0bec5;
+}
+.navbar-custom .nav-item:hover .nav-link {
+    background: #b0bec5;
+    color: #263238;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.navbar-custom.dark-mode .nav-link {
+    color: #eceff1;
+}
+
+.navbar-custom.dark-mode .nav-item .nav-link {
+    border: none;  /* Remove border */
+}
+
+.navbar-custom.dark-mode .btn-custom-nav:hover {
+    background-color: #444;
+    color: #eceff1;
+    border: 1px solid #eceff1;
+}
+.navbar-custom.dark-mode .btn-custom-nav {
+    background-color: #333;
+    color: #eceff1;
+    border: 1px solid #eceff1;
+}

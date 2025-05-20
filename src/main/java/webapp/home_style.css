@@ -1,0 +1,251 @@
+/* ===== GLOBAL STYLING ===== */
+:root {
+	--primary-color: #3498db;
+	--primary-hover: #2980b9;
+	--text-color: #2c3e50;
+	--text-secondary: #5d6778;
+	--bg-color: #f8f9fa;
+	--card-bg: #ffffff;
+	--border-color: #e2e8f0;
+	--shadow-color: rgba(0, 0, 0, 0.1);
+	--card-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+	--card-shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.15);
+	--btn-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	--btn-shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.15);
+	--feature-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+	--icon-color: #3498db;
+	--header-bg: #2c3e50;
+	--welcome-bg: #f8f9fa;
+	--welcome-text: #666;
+	--pattern-opacity: 0.2;
+}
+
+/* ===== DARK MODE STYLES ===== */
+body.dark-mode {
+	--primary-color: #4834d4;
+	--primary-hover: #3926b3;
+	--text-color: #e0e0e0;
+	--text-secondary: #bdc3c7;
+	--bg-color: #121212;
+	--card-bg: #252525;
+	--border-color: rgba(255, 255, 255, 0.1);
+	--shadow-color: rgba(0, 0, 0, 0.3);
+	--card-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+	--card-shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.4);
+	--btn-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	--btn-shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.3);
+	--feature-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	--icon-color: #4834d4;
+	--header-bg: linear-gradient(135deg, #4834d4 0%, #3a1c71 100%);
+	--welcome-bg: #1e1e1e;
+	--welcome-text: #bdc3c7;
+	--pattern-opacity: 0.15;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: var(--bg-color);
+	transition: all 0.3s ease;
+	color: var(--text-color);
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Ensure footer sticks to bottom */
+footer {
+	margin-top: auto;
+}
+
+/* ===== BACKGROUND PATTERN ===== */
+.page-content {
+	flex: 1;
+	background-color: var(--bg-color);
+	background-image:
+		url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><defs><pattern id="pattern" width="800" height="800" patternUnits="userSpaceOnUse"><g fill="%23607D8B" opacity="0.2"><path d="M150 150 Q 180 120, 200 150 T 250 150 M80 80 Q 95 65, 110 80 T 140 80 M300 300 Q 320 280, 340 300 T 380 300 M400 120 Q 410 110, 420 120 T 440 120 M180 400 Q 195 385, 210 400 T 240 400"/><circle cx="200" cy="250" r="3"/><circle cx="400" cy="350" r="3"/><circle cx="120" cy="340" r="3"/><path d="M600 200 L 650 200 M620 180 L 620 220 M540 100 L 560 100 M550 90 L 550 110 M680 300 L 720 300 M700 280 L 700 320"/><text x="500" y="400" font-family="Arial" font-size="30" fill="%23607D8B">A</text><path d="M300 500 C 320 520, 350 520, 370 500 S 420 480, 440 500"/></g></pattern></defs><rect width="100%" height="100%" fill="url(%23pattern)"/></svg>');
+	padding-bottom: 2rem;
+}
+
+.container {
+    padding-top: 0; 
+}
+.home-page .page-content {
+    margin-top: 50px; /* Reduced from 70px to 50px */
+    padding-top: 0;
+}
+/* ===== HERO SECTION ===== */
+.hero-section {
+	background: var(--card-bg);
+    margin-top: 15px; /* Reduced from 30px */
+    margin-bottom: 20px; /* Reduced from 30px */
+    padding: 40px 0; /* Reduced from 50px */
+	border-radius: 12px;
+	box-shadow: var(--card-shadow);
+
+	transition: all 0.3s ease;
+	animation: fadeIn 1s ease-in;
+	border: 1px solid var(--border-color);
+}
+
+.hero-section:hover {
+	transform: translateY(-5px);
+	box-shadow: var(--card-shadow-hover);
+}
+
+@keyframes fadeIn {from { opacity:0;
+	transform: translateY(20px);
+}
+
+to {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+}
+.hero-title {
+	font-family: 'Georgia', serif;
+	font-weight: 700;
+	color: var(--text-color);
+	margin-bottom: 24px;
+	letter-spacing: 0.5px;
+	transition: color 0.3s ease;
+}
+
+.hero-subtitle {
+	font-family: 'Open Sans', sans-serif;
+	color: var(--text-secondary);
+	font-size: 18px;
+	margin-bottom: 36px;
+	line-height: 1.6;
+	transition: color 0.3s ease;
+}
+
+/* ===== CTA BUTTON ===== */
+.cta-button {
+	background: var(--header-bg);
+	color: white !important;
+	padding: 12px 32px;
+	border-radius: 4px;
+	font-weight: 500;
+	transition: all 0.3s ease;
+	border: none;
+	box-shadow: var(--btn-shadow);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 0.95rem;
+}
+
+.cta-button:hover {
+	transform: translateY(-2px);
+	box-shadow: var(--btn-shadow-hover);
+	background: var(--primary-hover);
+}
+
+.cta-button:active {
+	transform: translateY(1px);
+	box-shadow: var(--btn-shadow);
+}
+
+/* ===== NOTES IMAGE ===== */
+.notes-image {
+	max-width: 300px; /* Reduced size */
+	filter: drop-shadow(0 10px 20px var(--shadow-color));
+	margin-bottom: 30px;
+	transition: transform 0.5s ease;
+}
+
+.notes-image:hover {
+	transform: scale(1.02);
+}
+
+/* ===== FEATURES SECTION ===== */
+.features-section {
+	padding: 40px 0;
+}
+
+.feature-card {
+	background-color: var(--card-bg);
+	border-radius: 8px;
+	padding: 30px;
+	box-shadow: var(--feature-shadow);
+	transition: all 0.3s ease;
+	height: 100%;
+	border: 1px solid var(--border-color);
+	animation: fadeIn 1s ease-in;
+	animation-delay: calc(var(--animation-order)* 0.2s);
+	opacity: 0;
+	animation-fill-mode: forwards;
+}
+
+.feature-card:hover {
+	transform: translateY(-5px);
+	box-shadow: var(--card-shadow-hover);
+}
+
+.feature-icon {
+	font-size: 40px;
+	color: var(--icon-color);
+	margin-bottom: 20px;
+	transition: color 0.3s ease;
+}
+
+.feature-title {
+	font-weight: 600;
+	margin-bottom: 15px;
+	color: var(--text-color);
+	transition: color 0.3s ease;
+}
+
+.feature-card p {
+	color: var(--text-secondary);
+	transition: color 0.3s ease;
+}
+
+/* ===== WELCOME MESSAGE ===== */
+.welcome-message {
+	background-color: var(--welcome-bg);
+	padding: 15px;
+	border-radius: 6px;
+	margin-bottom: 25px;
+	font-style: italic;
+	color: var(--welcome-text);
+	transition: all 0.3s ease;
+	border: 1px solid var(--border-color);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+	animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Set animation order for feature cards */
+.col-md-4:nth-child(1) .feature-card {
+	--animation-order: 1;
+}
+
+.col-md-4:nth-child(2) .feature-card {
+	--animation-order: 2;
+}
+
+.col-md-4:nth-child(3) .feature-card {
+	--animation-order: 3;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media ( max-width : 768px) {
+	.hero-section {
+		padding: 30px 20px;
+	}
+	.feature-card {
+		margin-bottom: 20px;
+	}
+}
+
+@media ( max-width : 480px) {
+	.hero-title {
+		font-size: 1.8rem;
+	}
+	.hero-subtitle {
+		font-size: 16px;
+	}
+	.cta-button {
+		padding: 10px 24px;
+	}
+}

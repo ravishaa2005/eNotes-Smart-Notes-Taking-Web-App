@@ -1,0 +1,404 @@
+/* =/* ===== GLOBAL LOGIN PAGE STYLING ===== */
+body.login-page {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+    color: #323232;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.div-color {
+    flex: 1;
+    padding: 1rem 0;  /* Reduced padding to help fit without scrolling */
+    background-color: #ffffff;
+    background-image:
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><defs><pattern id="pattern" width="800" height="800" patternUnits="userSpaceOnUse"><g fill="%23607D8B" opacity="0.2"><path d="M150 150 Q 180 120, 200 150 T 250 150 M80 80 Q 95 65, 110 80 T 140 80 M300 300 Q 320 280, 340 300 T 380 300 M400 120 Q 410 110, 420 120 T 440 120 M180 400 Q 195 385, 210 400 T 240 400"/><circle cx="200" cy="250" r="3"/><circle cx="400" cy="350" r="3"/><circle cx="120" cy="340" r="3"/><path d="M600 200 L 650 200 M620 180 L 620 220 M540 100 L 560 100 M550 90 L 550 110 M680 300 L 720 300 M700 280 L 700 320"/><text x="500" y="400" font-family="Arial" font-size="30" fill="%23607D8B">A</text><path d="M300 500 C 320 520, 350 520, 370 500 S 420 480, 440 500"/></g></pattern></defs><rect width="100%" height="100%" fill="url(%23pattern)"/></svg>');
+}
+
+/* Ensure footer sticks to bottom */
+footer {
+    margin-top: auto;
+}
+
+/* ===== CARD STYLING ===== */
+.card {
+    border-radius: 12px;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin: 1rem auto;  /* Reduced margin to help fit without scrolling */
+    animation: fadeIn 1s ease-in;
+    max-width: 520px;  /* Slightly wider card */
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== CARD HEADER ===== */
+.card-header.bg-custom {
+    background: #2c3e50;
+    padding: 1.5rem 1.5rem;  /* Reduced padding to help fit without scrolling */
+    text-align: center;
+    border-bottom: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-header h4 {
+    color: #ffffff;
+    font-weight: 600;
+    margin: 0.5rem 0 0;
+    letter-spacing: 0.5px;
+    font-size: 1.6rem;
+}
+
+.card-header .fa-user-circle {
+    color: #ffffff;
+    margin-bottom: 0.6rem;
+}
+
+/* ===== FORM ELEMENTS ===== */
+.card-body {
+    padding: 1.8rem 2rem;  /* Reduced padding to help fit without scrolling */
+    background-color: #ffffff;
+}
+
+.form-group {
+    margin-bottom: 1.3rem;  /* Reduced margin to help fit without scrolling */
+    position: relative;
+}
+
+.form-group label {
+    font-weight: 500;
+    margin-bottom: 0.4rem;  /* Reduced margin to help fit without scrolling */
+    color: #2c3e50;
+    display: block;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.form-group .fa {
+    margin-right: 6px;
+    color: #3498db;
+}
+
+.form-control {
+    border-radius: 6px;
+    padding: 0.7rem 1rem;  /* Slightly reduced padding */
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    color: #2c3e50;
+    background-color: #f8fafc;
+}
+
+.form-control:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+    background-color: #ffffff;
+    outline: none;
+}
+
+.form-control::placeholder {
+    color: #7f8c8d;
+    font-size: 0.95rem;
+}
+
+/* ===== CHECKBOX STYLING ===== */
+.form-check {
+    padding-left: 1.8rem;
+    margin-bottom: 1.2rem;  /* Reduced margin to help fit without scrolling */
+}
+
+.form-check-input {
+    margin-top: 0.25rem;
+    margin-left: -1.8rem;
+    width: 1.1rem;
+    height: 1.1rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.form-check-input:checked {
+    background-color: #3498db;
+    border-color: #3498db;
+}
+
+.form-check-label {
+    color: #2c3e50;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+/* ===== LOGIN BUTTON ===== */
+.btn-primary,
+button[type="submit"],
+.container-fluid1 {
+    background: #2c3e50;
+    color: #ffffff;
+    border: none;
+    font-weight: 500;
+    padding: 0.8rem 0;  /* Slightly reduced padding */
+    border-radius: 4px;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+.btn-primary:hover,
+button[type="submit"]:hover,
+.container-fluid1:hover {
+    background: #34495e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.btn-primary:active,
+button[type="submit"]:active,
+.container-fluid1:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== SIGN UP SECTION ===== */
+.signup-container {
+    text-align: center;
+    margin-top: 1.5rem;  /* Reduced margin to help fit without scrolling */
+    padding-top: 1.5rem;  /* Reduced padding to help fit without scrolling */
+    border-top: 1px solid #e2e8f0;
+    position: relative;
+}
+
+.signup-container::before {
+    content: "or";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffffff;
+    padding: 0 1rem;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+.signup-text {
+    font-size: 1rem;
+    color: #2c3e50;
+    margin-bottom: 0.8rem;  /* Reduced margin to help fit without scrolling */
+    display: block;
+}
+
+.signup-link {
+    display: inline-block;
+    background: transparent;
+    color: #3498db;
+    border: 2px solid #3498db;
+    padding: 0.6rem 2rem;  /* Slightly reduced padding */
+    border-radius: 4px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+}
+
+.signup-link:hover {
+    background: rgba(52, 152, 219, 0.08);
+    color: #2980b9;
+    border-color: #2980b9;
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(41, 128, 185, 0.1);
+}
+
+/* ===== ALERTS & NOTIFICATIONS ===== */
+.alert {
+    border-radius: 6px;
+    padding: 0.8rem 1.25rem;  /* Slightly reduced padding */
+    margin-bottom: 1.2rem;  /* Reduced margin to help fit without scrolling */
+    border: none;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.alert .fa {
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+.alert-danger {
+    background-color: rgba(231, 76, 60, 0.08);
+    border-left: 4px solid #e74c3c;
+    color: #c0392b;
+}
+
+.alert-success {
+    background-color: rgba(46, 204, 113, 0.08);
+    border-left: 4px solid #2ecc71;
+    color: #27ae60;
+}
+
+/* ===== DARK MODE STYLES ===== */
+body.login-page.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-mode .div-color {
+    background-color: #1a1a1a;
+    background-image:
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><defs><pattern id="pattern" width="800" height="800" patternUnits="userSpaceOnUse"><g fill="%23607D8B" opacity="0.15"><path d="M150 150 Q 180 120, 200 150 T 250 150 M80 80 Q 95 65, 110 80 T 140 80 M300 300 Q 320 280, 340 300 T 380 300 M400 120 Q 410 110, 420 120 T 440 120 M180 400 Q 195 385, 210 400 T 240 400"/><circle cx="200" cy="250" r="3"/><circle cx="400" cy="350" r="3"/><circle cx="120" cy="340" r="3"/><path d="M600 200 L 650 200 M620 180 L 620 220 M540 100 L 560 100 M550 90 L 550 110 M680 300 L 720 300 M700 280 L 700 320"/><text x="500" y="400" font-family="Arial" font-size="30" fill="%23607D8B">A</text><path d="M300 500 C 320 520, 350 520, 370 500 S 420 480, 440 500"/></g></pattern></defs><rect width="100%" height="100%" fill="url(%23pattern)"/></svg>');
+}
+
+.dark-mode .card {
+    background-color: #1e1e1e;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Dark purple for card header in dark mode as requested */
+.dark-mode .card-header.bg-custom {
+    background: linear-gradient(135deg, #4834d4 0%, #3a1c71 100%);
+}
+
+.dark-mode .card-body {
+    background-color: #252525;
+    color: #e0e0e0;
+}
+
+.dark-mode .signup-container::before {
+    background: #252525;
+}
+
+.dark-mode label {
+    color: #bdc3c7;
+}
+
+.dark-mode .form-group .fa {
+    color: #4834d4;
+}
+
+.dark-mode .form-control {
+    background-color: #333333;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+.dark-mode .form-control:focus {
+    border-color: #4834d4;
+    box-shadow: 0 0 0 3px rgba(72, 52, 212, 0.25);
+    background-color: #3a3a3a;
+}
+
+.dark-mode .form-control::placeholder {
+    color: #777777;
+}
+
+.dark-mode .form-check-input {
+    background-color: #333;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .form-check-input:checked {
+    background-color: #4834d4;
+    border-color: #4834d4;
+}
+
+.dark-mode .form-check-label {
+    color: #bdc3c7;
+}
+
+/* Blue to purple gradient for button in dark mode as requested */
+.dark-mode .btn-primary,
+.dark-mode button[type="submit"],
+.dark-mode .container-fluid1 {
+    background: linear-gradient(135deg, #3a1c71 0%, #4834d4 100%);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .btn-primary:hover,
+.dark-mode button[type="submit"]:hover,
+.dark-mode .container-fluid1:hover {
+    background: linear-gradient(135deg, #2d1660 0%, #3926b3 100%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .signup-container {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .signup-text {
+    color: #e0e0e0;
+}
+
+.dark-mode .signup-link {
+    color: #4834d4;
+    border: 2px solid #4834d4;
+}
+
+.dark-mode .signup-link:hover {
+    background: rgba(72, 52, 212, 0.1);
+    color: #6c5ce7;
+    border-color: #4834d4;
+}
+
+.dark-mode .alert-danger {
+    background-color: rgba(231, 76, 60, 0.15);
+    color: #e74c3c;
+}
+
+.dark-mode .alert-success {
+    background-color: rgba(46, 204, 113, 0.15);
+    color: #2ecc71;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 768px) {
+    .card {
+        margin: 1rem;
+        width: calc(100% - 2rem);
+    }
+    
+    .card-body {
+        padding: 1.5rem 1.5rem;
+    }
+    
+    .card-header.bg-custom {
+        padding: 1.5rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-body {
+        padding: 1.5rem 1.2rem;
+    }
+    
+    .form-group {
+        margin-bottom: 1.2rem;
+    }
+}

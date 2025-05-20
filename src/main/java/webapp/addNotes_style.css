@@ -1,0 +1,330 @@
+ /* ===== GLOBAL STYLING ===== */ 
+ :root {
+	--primary-color: #3498db;
+	--primary-hover: #2980b9;
+	--text-color: #2c3e50;
+	--text-secondary: #5d6778;
+	--bg-color: #f8f9fa;
+	--card-bg: #ffffff;
+	--border-color: #e2e8f0;
+	--shadow-color: rgba(0, 0, 0, 0.1);
+	--card-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+	--card-shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.15);
+	--btn-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	--btn-shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.15);
+	--feature-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+	--icon-color: #3498db;
+	--header-bg: #2c3e50;
+}
+
+/* ===== DARK MODE STYLES ===== */
+body.dark-mode {
+	--primary-color: #4834d4;
+	--primary-hover: #3926b3;
+	--text-color: #e0e0e0;
+	--text-secondary: #bdc3c7;
+	--bg-color: #121212;
+	--card-bg: #252525;
+	--border-color: rgba(255, 255, 255, 0.1);
+	--shadow-color: rgba(0, 0, 0, 0.3);
+	--card-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+	--card-shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.4);
+	--btn-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	--btn-shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.3);
+	--feature-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	--icon-color: #4834d4;
+	--header-bg: linear-gradient(135deg, #4834d4 0%, #3a1c71 100%);
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: var(--bg-color);
+	transition: all 0.3s ease;
+	color: var(--text-color);
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Ensure footer sticks to bottom */
+footer {
+	margin-top: auto;
+}
+
+.add-notes-page {
+	position: relative;
+	flex: 1;
+	background-color: var(--bg-color);
+	background-image:
+		url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><defs><pattern id="pattern" width="800" height="800" patternUnits="userSpaceOnUse"><g fill="%23607D8B" opacity="0.2"><path d="M150 150 Q 180 120, 200 150 T 250 150 M80 80 Q 95 65, 110 80 T 140 80 M300 300 Q 320 280, 340 300 T 380 300 M400 120 Q 410 110, 420 120 T 440 120 M180 400 Q 195 385, 210 400 T 240 400"/><circle cx="200" cy="250" r="3"/><circle cx="400" cy="350" r="3"/><circle cx="120" cy="340" r="3"/><path d="M600 200 L 650 200 M620 180 L 620 220 M540 100 L 560 100 M550 90 L 550 110 M680 300 L 720 300 M700 280 L 700 320"/><text x="500" y="400" font-family="Arial" font-size="30" fill="%23607D8B">A</text><path d="M300 500 C 320 520, 350 520, 370 500 S 420 480, 440 500"/></g></pattern></defs><rect width="100%" height="100%" fill="url(%23pattern)"/></svg>');
+	padding-bottom: 2rem;
+}
+
+/* Notes Form Card Styling */
+.note-container {
+	max-width: 900px;
+	margin: 0 auto;
+	position: relative;
+	animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+        }
+.note-card {
+	background: var(--card-bg);
+	border-radius: 12px;
+	box-shadow: var(--card-shadow);
+	padding: 0;
+	margin-bottom: 2rem;
+	position: relative;
+	overflow: hidden;
+	transition: all 0.3s ease;
+	border: 1px solid var(--border-color);
+}
+
+.note-card:hover {
+	transform: translateY(-5px);
+	box-shadow: var(--card-shadow-hover);
+}
+
+/* Notebook Design Elements */
+.notebook-header {
+	background-color: var(--header-bg);
+	padding: 1.5rem 2rem;
+	border-radius: 12px 12px 0 0;
+	position: relative;
+	color: white;
+}
+
+.notebook-body {
+	position: relative;
+	padding: 2rem;
+}
+
+/* Typography */
+.page-title {
+	font-family: 'Georgia', serif;
+	font-weight: 700;
+	color: var(--text-color);
+	margin-bottom: 24px;
+	letter-spacing: 0.5px;
+	transition: color 0.3s ease;
+	position: relative;
+	display: inline-block;
+	font-size: 2.25rem;
+}
+
+.page-title:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -8px;
+	height: 4px;
+	width: 60px;
+	background: linear-gradient(90deg, var(--primary-color),
+		var(--primary-hover));
+	border-radius: 2px;
+}
+
+/* Form elements */
+.form-group {
+	margin-bottom: 1.8rem;
+	position: relative;
+	z-index: 1;
+}
+
+.form-label {
+	display: block;
+	margin-bottom: 0.75rem;
+	font-weight: 500;
+	color: var(--text-secondary);
+	font-size: 0.95rem;
+	transition: all 0.2s ease;
+}
+
+.title-input {
+	background-color: transparent;
+	border: none;
+	padding: 0.5rem 0;
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: white;
+	transition: all 0.3s ease;
+	width: 100%;
+	border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.title-input:focus {
+	border-color: white;
+	box-shadow: none;
+	outline: none;
+}
+
+.title-input::placeholder {
+	color: rgba(255, 255, 255, 0.7);
+	opacity: 0.7;
+	font-weight: 400;
+}
+
+.content-textarea {
+	background-color: var(--card-bg);
+	border: 1px solid var(--border-color);
+	border-radius: 8px;
+	padding: 1.5rem;
+	font-size: 1rem;
+	line-height: 1.6;
+	color: var(--text-color);
+	transition: all 0.3s ease;
+	width: 100%;
+	height: 350px;
+	resize: vertical;
+	box-shadow: var(--btn-shadow);
+}
+
+.content-textarea:focus {
+	border-color: var(--primary-color);
+	box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+	outline: none;
+}
+
+.content-textarea::placeholder {
+	color: var(--text-secondary);
+	opacity: 0.7;
+}
+
+/* Button Styling */
+.btn-container {
+	margin-top: 2rem;
+	text-align: right;
+}
+
+.btn-save {
+	background: var(--header-bg);
+	color: white;
+	border: none;
+	border-radius: 4px;
+	padding: 12px 32px;
+	font-size: 1rem;
+	font-weight: 500;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	position: relative;
+	overflow: hidden;
+	transition: all 0.3s ease;
+	box-shadow: var(--btn-shadow);
+	cursor: pointer;
+}
+
+.btn-save:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2),
+		transparent);
+	transition: all 0.6s ease;
+}
+
+.btn-save:hover {
+	transform: translateY(-2px);
+	box-shadow: var(--btn-shadow-hover);
+	background: var(--primary-hover);
+}
+
+.btn-save:hover:before {
+	left: 100%;
+}
+
+.btn-save:active {
+	transform: translateY(1px);
+	box-shadow: var(--btn-shadow);
+}
+
+.btn-save i {
+	margin-right: 8px;
+}
+
+/* Speech button styling */
+.mic-button {
+	background: transparent;
+	border: none;
+	color: var(--primary-color);
+	font-size: 1.1rem;
+	cursor: pointer;
+	position: absolute;
+	right: 12px;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: all 0.2s ease;
+	width: 36px;
+	height: 36px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 2;
+	border-radius: 50%;
+}
+
+.notebook-header .mic-button {
+	color: rgba(255, 255, 255, 0.8);
+}
+
+.mic-button:hover {
+	background-color: rgba(52, 152, 219, 0.1);
+	transform: translateY(-50%) scale(1.05);
+}
+
+.notebook-header .mic-button:hover {
+	background-color: rgba(255, 255, 255, 0.15);
+}
+
+.mic-button:active {
+	transform: translateY(-50%) scale(0.95);
+}
+
+.mic-button.active {
+	color: #ef476f;
+	animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+       0% { transform: translateY(-50%) scale(1); }
+       50% { transform: translateY(-50%) scale(1.1); }
+       100% { transform: translateY(-50%) scale(1); }
+        }
+
+/* Speech indicator */
+.speech-indicator {
+	text-align: center;
+	color: var(--primary-color);
+	font-weight: 500;
+	font-size: 0.9rem;
+	height: 24px;
+	margin: 0.5rem 0;
+	transition: all 0.3s ease;
+}
+
+/* Input wrapper for mic positioning */
+.input-wrapper {
+	position: relative;
+}
+
+/* Responsive adjustments */
+@media ( max-width : 768px) {
+	.notebook-header, .notebook-body {
+		padding: 1.5rem;
+	}
+	.page-title {
+		font-size: 1.75rem;
+	}
+	.title-input {
+		font-size: 1.2rem;
+	}
+	.content-textarea {
+		height: 250px;
+	}
+}

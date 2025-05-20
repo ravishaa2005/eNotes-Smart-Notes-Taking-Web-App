@@ -1,0 +1,343 @@
+ 
+    :root {
+        --primary-color: #3498db;
+        --primary-hover: #2980b9;
+        --text-color: #2c3e50;
+        --text-secondary: #5d6778;
+        --bg-color: #f8f9fa;
+        --card-bg: #ffffff;
+        --border-color: #e2e8f0;
+        --shadow-color: rgba(0, 0, 0, 0.1);
+        --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        --card-shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.15);
+        --btn-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        --btn-shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.15);
+        --feature-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        --icon-color: #3498db;
+        --header-bg: #2c3e50;
+    }
+
+    /* ===== DARK MODE STYLES ===== */
+    body.dark-mode {
+        --primary-color: #4834d4;
+        --primary-hover: #3926b3;
+        --text-color: #e0e0e0;
+        --text-secondary: #bdc3c7;
+        --bg-color: #121212;
+        --card-bg: #252525;
+        --border-color: rgba(255, 255, 255, 0.1);
+        --shadow-color: rgba(0, 0, 0, 0.3);
+        --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        --card-shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.4);
+        --btn-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        --btn-shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.3);
+        --feature-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        --icon-color: #4834d4;
+        --header-bg: linear-gradient(135deg, #4834d4 0%, #3a1c71 100%);
+    }
+    
+    .show-notes-page {
+        font-family: 'Roboto', sans-serif;
+        background-color: var(--bg-color);
+        transition: all 0.3s ease;
+        color: var(--text-color);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        background-image:
+            url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><defs><pattern id="pattern" width="800" height="800" patternUnits="userSpaceOnUse"><g fill="%23607D8B" opacity="0.2"><path d="M150 150 Q 180 120, 200 150 T 250 150 M80 80 Q 95 65, 110 80 T 140 80 M300 300 Q 320 280, 340 300 T 380 300 M400 120 Q 410 110, 420 120 T 440 120 M180 400 Q 195 385, 210 400 T 240 400"/><circle cx="200" cy="250" r="3"/><circle cx="400" cy="350" r="3"/><circle cx="120" cy="340" r="3"/><path d="M600 200 L 650 200 M620 180 L 620 220 M540 100 L 560 100 M550 90 L 550 110 M680 300 L 720 300 M700 280 L 700 320"/><text x="500" y="400" font-family="Arial" font-size="30" fill="%23607D8B">A</text><path d="M300 500 C 320 520, 350 520, 370 500 S 420 480, 440 500"/></g></pattern></defs><rect width="100%" height="100%" fill="url(%23pattern)"/></svg>');
+    }
+    
+    /* Ensure footer sticks to bottom */
+    footer {
+        margin-top: auto;
+    }
+    
+    /* Page Header */
+    .page-header {
+    background: transparent; /* Remove background color */
+    color: var(--text-color); /* Default text color */
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+    border-radius: 0;
+    box-shadow: none; /* Remove shadow */
+}
+    
+.page-title {
+    font-family: 'Georgia', serif;
+    font-weight: 700;
+    color: #2c3e50; /* Dark text in light mode */
+    margin-bottom: 0;
+    letter-spacing: 0.5px;
+    position: relative;
+    display: inline-block;
+    font-size: 2.25rem;
+    text-shadow: none; /* No text shadow needed for dark text */
+}
+body.dark-mode .page-title {
+    color: white; /* White text in dark mode */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* Text shadow for readability in dark mode */
+}
+
+    
+.page-title:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    height: 4px;
+    width: 60px;
+    background: #2c3e50; /* Dark purple-blue underline */
+    border-radius: 2px;
+}
+    
+    /* Notes Container */
+    .notes-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        animation: fadeIn 1s ease-in;
+        padding-bottom: 2rem;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Note Card Styling */
+    .note-card {
+        background: var(--card-bg);
+        border-radius: 12px;
+        box-shadow: var(--card-shadow);
+        margin-bottom: 2rem;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        border: 1px solid var(--border-color);
+        animation: fadeIn 0.5s ease-in-out;
+        animation-fill-mode: both;
+    }
+    
+    .note-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--card-shadow-hover);
+    }
+    
+    /* Note Header */
+.note-header {
+    background-color: var(--header-bg);
+    padding: 1.2rem 1.5rem;
+    border-radius: 12px 12px 0 0;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+    
+    .note-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: white;
+        margin: 0;
+        flex-grow: 1;
+        transition: all 0.3s ease;
+    }
+    
+    .note-icon {
+        width: 40px;
+        height: auto;
+        margin-right: 1rem;
+        transition: all 0.3s ease;
+    }
+    
+    /* Note Body */
+    .note-body {
+        position: relative;
+        padding: 1.5rem;
+    }
+    
+    .note-content {
+        background-color: var(--bg-color);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 1.5rem;
+        font-size: 1rem;
+        line-height: 1.6;
+        color: var(--text-color);
+        margin-bottom: 1.5rem;
+        box-shadow: var(--btn-shadow);
+        border-left: 4px solid var(--primary-color);
+        transition: all 0.3s ease;
+    }
+    
+    /* Note Metadata */
+    .note-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+    }
+    
+    .note-meta-item {
+        display: flex;
+        align-items: center;
+        margin-right: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .note-meta-icon {
+        margin-right: 0.5rem;
+        color: var(--icon-color);
+    }
+    
+    /* Map Container */
+    .map-container {
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: var(--btn-shadow);
+        margin: 1.5rem 0;
+        border: 1px solid var(--border-color);
+    }
+    
+    /* Delete Confirmation Box */
+    .delete-confirm-box {
+        padding: 1rem;
+        border-radius: 8px;
+        background-color: #fff3cd;
+        border: 1px solid #ffeeba;
+        margin-bottom: 1.5rem;
+        display: none;
+        transition: all 0.3s ease;
+    }
+    
+    body.dark-mode .delete-confirm-box {
+        background-color: #3d3d29;
+        border: 1px solid #6b6b47;
+    }
+    
+    /* Button Styling */
+    .note-actions {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: flex-end;
+        gap: 0.8rem;
+    }
+    
+    .btn-action {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        box-shadow: var(--btn-shadow);
+    }
+    
+    .btn-action:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--btn-shadow-hover);
+    }
+    
+    .btn-action:active {
+        transform: translateY(1px);
+        box-shadow: var(--btn-shadow);
+    }
+    
+    .btn-edit {
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+    }
+    
+    .btn-edit:hover {
+        background-color: var(--primary-hover);
+        color: white;
+    }
+    
+    .btn-delete {
+        background-color: #e74c3c;
+        color: white;
+        border: none;
+    }
+    
+    .btn-delete:hover {
+        background-color: #c0392b;
+        color: white;
+    }
+    
+    /* Empty Notes State */
+    .empty-notes {
+        text-align: center;
+        padding: 3rem 0;
+    }
+    
+    .empty-notes-icon {
+        font-size: 5rem;
+        color: var(--text-secondary);
+        margin-bottom: 1.5rem;
+        opacity: 0.5;
+    }
+    
+    /* Alert Messages */
+    .alert-custom {
+        border-radius: 8px;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        box-shadow: var(--btn-shadow);
+        border-left: 4px solid;
+    }
+    
+    .alert-custom.alert-success {
+        border-left-color: #28a745;
+    }
+    
+    .alert-custom.alert-danger {
+        border-left-color: #dc3545;
+    }
+    
+    .alert-custom.alert-warning {
+        border-left-color: #ffc107;
+    }
+    
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: var(--bg-color);
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: var(--text-secondary);
+        border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--text-color);
+    }
+    
+    /* Animation for Cards */
+    @keyframes slideIn {
+        0% {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .animated-card {
+        animation: slideIn 0.5s ease forwards;
+    }

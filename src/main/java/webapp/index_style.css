@@ -1,0 +1,246 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: #f8f9fa;
+	transition: all 0.3s ease;
+}
+
+.btn-custom1 {
+	background: #2c3e50;
+	padding: 10px 20px;
+	font-weight: 500;
+	border-radius: 4px;
+	transition: all 0.3s ease;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-custom1:hover {
+	background: #34495e;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.hero-section {
+	position: relative;
+	min-height: 85vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.hero-section.light-mode {
+	background-color: #ffffff;
+	background-image:
+		url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><defs><pattern id="pattern" width="800" height="800" patternUnits="userSpaceOnUse"><g fill="%23607D8B" opacity="0.2"><path d="M150 150 Q 180 120, 200 150 T 250 150 M80 80 Q 95 65, 110 80 T 140 80 M300 300 Q 320 280, 340 300 T 380 300 M400 120 Q 410 110, 420 120 T 440 120 M180 400 Q 195 385, 210 400 T 240 400"/><circle cx="200" cy="250" r="3"/><circle cx="400" cy="350" r="3"/><circle cx="120" cy="340" r="3"/><path d="M600 200 L 650 200 M620 180 L 620 220 M540 100 L 560 100 M550 90 L 550 110 M680 300 L 720 300 M700 280 L 700 320"/><text x="500" y="400" font-family="Arial" font-size="30" fill="%23607D8B">A</text><path d="M300 500 C 320 520, 350 520, 370 500 S 420 480, 440 500"/></g></pattern></defs><rect width="100%" height="100%" fill="url(%23pattern)"/></svg>');
+	color: #2c3e50;
+}
+
+.hero-section.dark-mode {
+	background-color: #1a1a1a;
+	background-image:
+		url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><defs><pattern id="pattern" width="800" height="800" patternUnits="userSpaceOnUse"><g fill="%23607D8B" opacity="0.15"><path d="M150 150 Q 180 120, 200 150 T 250 150 M80 80 Q 95 65, 110 80 T 140 80 M300 300 Q 320 280, 340 300 T 380 300 M400 120 Q 410 110, 420 120 T 440 120 M180 400 Q 195 385, 210 400 T 240 400"/><circle cx="200" cy="250" r="3"/><circle cx="400" cy="350" r="3"/><circle cx="120" cy="340" r="3"/><path d="M600 200 L 650 200 M620 180 L 620 220 M540 100 L 560 100 M550 90 L 550 110 M680 300 L 720 300 M700 280 L 700 320"/><text x="500" y="400" font-family="Arial" font-size="30" fill="%23607D8B">A</text><path d="M300 500 C 320 520, 350 520, 370 500 S 420 480, 440 500"/></g></pattern></defs><rect width="100%" height="100%" fill="url(%23pattern)"/></svg>');
+	color: #e0e0e0;
+}
+
+.hero-content {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 60px 20px;
+	text-align: center;
+	border-radius: 8px;
+	animation: fadeIn 1s ease-in;
+	z-index: 1;
+}
+
+.hero-title {
+	font-size: 3.5rem;
+	font-weight: 700;
+	margin-bottom: 1.5rem;
+	letter-spacing: -0.5px;
+}
+
+.light-mode .hero-title {
+	color: #2c3e50;
+}
+
+.dark-mode .hero-title {
+	color: #e0e0e0;
+}
+
+.hero-subtitle {
+	font-size: 1.5rem;
+	margin-bottom: 2.5rem;
+	font-weight: 300;
+}
+
+.light-mode .hero-subtitle {
+	color: #7f8c8d;
+}
+
+.dark-mode .hero-subtitle {
+	color: #a0a0a0;
+}
+
+.btn-group {
+	margin-top: 20px;
+}
+
+.btn-icon {
+	margin-right: 8px;
+}
+
+.features-section {
+	padding: 40px 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 30px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.feature-card {
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(5px);
+	border-radius: 8px;
+	padding: 25px;
+	width: 300px;
+	transition: all 0.3s ease;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	text-align: center;
+}
+
+.light-mode .feature-card {
+	background: rgba(255, 255, 255, 0.8);
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+	border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode .feature-card {
+	background: rgba(30, 30, 30, 0.6);
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+	border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.feature-card:hover {
+	transform: translateY(-5px);
+}
+
+.feature-icon {
+	font-size: 2.5rem;
+	margin-bottom: 15px;
+}
+
+.light-mode .feature-icon {
+	color: #3498db;
+}
+
+.dark-mode .feature-icon {
+	color: #5dade2;
+}
+
+.feature-title {
+	font-size: 1.2rem;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+.light-mode .feature-title {
+	color: #2c3e50;
+}
+
+.dark-mode .feature-title {
+	color: #e0e0e0;
+}
+
+.feature-desc {
+	font-size: 0.95rem;
+	line-height: 1.5;
+}
+
+.light-mode .feature-desc {
+	color: #7f8c8d;
+}
+
+.dark-mode .feature-desc {
+	color: #bdc3c7;
+}
+
+/* Button styles */
+.btn-custom1 {
+	background: #2c3e50;
+	padding: 10px 20px;
+	font-weight: 500;
+	border-radius: 4px;
+	transition: all 0.3s ease;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	border: none;
+}
+
+.btn-custom1:hover {
+	background: #34495e;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Dark mode button styling */
+.dark-mode .btn-custom1 {
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	color: #ffffff;
+	box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .btn-custom1:hover {
+	background: linear-gradient(135deg, #7286ec 0%, #8862ad 100%);
+	box-shadow: 0 6px 14px rgba(102, 126, 234, 0.4);
+	transform: translateY(-2px);
+}
+
+
+.dark-mode .btn-custom1 {
+	background: linear-gradient(135deg, #3a1c71 0%, #4834d4 100%);
+	color: white;
+	border-radius: 4px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	border: none;
+	padding: 10px 20px;
+	font-weight: 500;
+}
+
+.dark-mode .btn-custom1:hover {
+	background: linear-gradient(135deg, #2d1660 0%, #3926b3 100%);
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+/* Additional styling for feature cards in dark mode */
+.dark-mode .feature-card {
+	background: rgba(30, 30, 30, 0.7);
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+	border: 1px solid rgba(114, 134, 236, 0.2);
+}
+
+.dark-mode .feature-icon {
+	color: #667eea;
+}
+
+@keyframes fadeIn {from { opacity:0;
+	transform: translateY(20px);
+}
+
+to {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+}
+.dark-mode .btn-custom1 {
+	background: #3498db;
+}
+
+.dark-mode .btn-custom1:hover {
+	background: #2980b9;
+}
+
+body.dark-mode {
+	background-color: #121212;
+	color: #e0e0e0;
+}
