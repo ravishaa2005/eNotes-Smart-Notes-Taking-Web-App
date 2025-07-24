@@ -64,8 +64,7 @@ Follow these steps to set up and run the eNotes application locally:
 
 | Add Notes | View/Edit Notes | Light Mode |
 |-----------|------------------|------------|
-| ![Add Notes](assets/images/add_notes.png) | ![Edit Notes](assets/images/view_notes%28dark%20mode%29.png)
- | ![Light Mode](assets/images/view_notes%28light%20mode%29.png)|
+| ![Add Notes](assets/images/add_notes.png) | ![Edit Notes](assets/images/view_notes%28dark%20mode%29.png) | ![Light Mode](assets/images/view_notes%28light%20mode%29.png) |
 
 
   
