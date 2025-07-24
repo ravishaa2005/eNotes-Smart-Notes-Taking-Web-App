@@ -11,18 +11,13 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
 ### Overview
-**eNotes** is a full-stack web application designed to simplify personal note-taking. It offers rich text editing, smart search, geotagging, dark mode support, and a responsive design — all built from the ground up using Java Servlets and JSP on the backend, and HTML/CSS/JS on the frontend.
-
-The goal was to build a clean, functional, and scalable note-taking platform that demonstrates real-world full-stack web development skills using Java EE and MySQL.
+**eNotes** is a full-stack web app built with Java Servlets, JSP, and MySQL, offering a responsive and maintainable solution for personal note-taking. It emphasizes clean architecture and real-world Java EE development practices.
 
 ### Core Features
-->Authentication: Secure login & registration with password encryption and session control.
-
-->Note Management: Create, edit, delete, and search notes with support for multiple text fonts, colors, and formatting styles.
-
-->Smart Features: Optional geolocation tagging and dark/light mode toggle.
-
-->Responsive UI: Mobile-friendly design with reusable, clean UI components.
+- Authentication: Secure login & registration with password encryption and session control.
+- Note Management: Create, edit, delete, and search notes with support for multiple text fonts, colors, and formatting styles.
+- Smart Features: Optional geolocation tagging and dark/light mode toggle.
+- Responsive UI: Mobile-friendly design with reusable, clean UI components.
 
 
 ### Setup & Configuration
@@ -52,18 +47,24 @@ Follow these steps to set up and run the eNotes application locally:
    ```
 
 2. Open the Project
-   Import the project into Eclipse or IntelliJ IDEA as a Dynamic Web Project or a Maven Project (if using Maven).
+   Open in Eclipse/IntelliJ as a Dynamic Web Project or Maven Project.
 
 3. Configure the Database
-   Make sure MySQL is running. Import the schema from db/schema.sql. Update DBConnect.java with your MySQL credentials (already shown above).
+   Start MySQL, import db/schema.sql and update credentials in DBConnect.java).
 
 4. Deploy the Application
    Configure and deploy the project on Apache Tomcat 9.
 
 5. Access in Browser
-   Visit-
-   '''bash
-   http://localhost:8080/eNotes-Smart-Notes-Taking-Web-App
-   ```
+
+### App Screenshots
+| Landing Page | Login Page | Home Page |
+|--------------|------------|-----------|
+| ![Landing](assets/images/main_page.png) | ![Login](assets/images/login_page.png) | ![Home](assets/images/homePage.png) |
+
+| Add Notes | View/Edit Notes | Light Mode |
+|-----------|------------------|------------|
+| ![Add Notes](assets/images/add_notes.png) | ![Edit Notes](assets/images/view_notes(dark mode).png) | ![Light Mode](assets/images/view_notes(light mode).png) |
+
 
   
