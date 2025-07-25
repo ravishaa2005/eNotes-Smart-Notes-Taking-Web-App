@@ -16,7 +16,7 @@
 ### Core Features
 - Authentication: Secure login & registration with password encryption and session control.
 - Note Management: Create, edit, delete, and search notes with support for multiple text fonts, colors, and formatting styles.
-- Smart Features: Optional geolocation tagging and dark/light mode toggle.
+- Smart Features: Speech-to-text input, optional geolocation tagging and dark/light mode toggle.
 - Responsive UI: Mobile-friendly design with reusable, clean UI components.
 
 
